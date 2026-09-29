@@ -1,0 +1,12 @@
+{
+  "name": "medicore-producto1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Producto 1 individual - Aplicaciones Web Progresivas - MediCore",
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
