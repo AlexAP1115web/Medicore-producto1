@@ -7,7 +7,10 @@ Página sencilla, responsiva, hecha con HTML + CSS + un poco de JS, para la mate
 
 - `index.html` — estructura de la página (encabezado, cuerpo, pie de página).
 - `style.css` — hoja de estilos (máximo 3 colores: verde `#1E7D3C`, tinta `#12283F`, coral `#FF6B4A`, sobre fondos claros).
-- `script.js` — abre/cierra el menú de navegación en móvil.
+- `script.js` — abre/cierra el menú de navegación en móvil y registra el service worker.
+- `sw.js` — service worker: guarda la página en cache para que cargue sin conexión.
+- `serve.json` — configuración del servidor (`sw.js` sin cache HTTP).
+- `assets/manifest.json` — manifest de la PWA (nombre, iconos, colores).
 - `package.json` — solo para poder desplegar en Railway (sirve los archivos estáticos).
 - `assets/demo-medicore.mp4` y `assets/demo-poster.jpg` — grabación real de pantalla del sistema MediCore (sin audio) y su miniatura.
 
@@ -25,3 +28,12 @@ No hace falta configurar nada más (no hay base de datos ni backend); es un siti
 
 - El video es una grabación real de pantalla del sistema MediCore corriendo en local (dashboard, expedientes, verificación en dos pasos, catálogo de enfermedades), sin audio.
 - La imagen del hero viene de Unsplash (uso libre).
+
+## PWA
+
+La página es una Aplicación Web Progresiva: tiene `manifest.json` (instalable) y un service
+worker (`sw.js`) que guarda los archivos principales para que funcione sin internet.
+Documentación completa del service worker: [docs/SERVICE_WORKER.md](docs/SERVICE_WORKER.md).
+
+- Página: https://medicore-producto1-production.up.railway.app/
+- Repositorio del proyecto MediCore: https://github.com/AlexAP1115web/MediCore

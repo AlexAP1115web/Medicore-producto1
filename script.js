@@ -15,3 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Registro del Service Worker (sw.js)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function (registro) {
+        console.log('Service Worker registrado. Alcance:', registro.scope);
+      })
+      .catch(function (error) {
+        console.log('No se pudo registrar el Service Worker:', error);
+      });
+  });
+}
